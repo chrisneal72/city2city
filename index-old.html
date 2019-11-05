@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>city2city</title>
+  <script
+    src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js?hcode=c11e6e3cfefb406e8ce8d99fa8368d33"></script>
+  <script
+    src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js?hcode=c11e6e3cfefb406e8ce8d99fa8368d33"></script>
+  <script
+    src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js?hcode=c11e6e3cfefb406e8ce8d99fa8368d33"></script>
+  <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css?hcode=c11e6e3cfefb406e8ce8d99fa8368d33"
+    type="text/css" rel="stylesheet">
+  <link
+    href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css?hcode=c11e6e3cfefb406e8ce8d99fa8368d33"
+    type="text/css" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="assets/css/teleport-autocomplete.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+</head>
+
+<body>
+  <section class="section">
+    <div class="container body-area">
+      <header class="header"><img class="logo" src="assets/images/c2c-black.png" alt="header logo"><br>
+        The application built for users who want to compare metrics between cities.
+      </header>
+
+      <hr>
+      <div class="columns cities-background">
+        <div id="box1" class="column is-6">
+          <div class="city-input-div">
+            <div class="textBox">Enter First City Name</div>
+            <input type="text" id="city-choice-1" class="input is-rounded input-adjust" name="city-1" placeholder="City Name"
+              tabindex="1" autocomplete="off">
+          </div>
+        </div>
+        <div id="box2" class="column is-6">
+          <div class="city-input-div">
+            <div>Enter Second City Name</div>
+            <input type="text" id="city-choice-2" class="input is-rounded input-adjust" name="city-2" placeholder="City Name"
+              tabindex="2" autocomplete="off">
+          </div>
+        </div>
+      </div>
+
+      <hr />
+      <!-- WEATHER DIVS -->
+      <div class="columns is-multiline is-flex">
+        <div class="column is-6-mobile is-2 side-box-1">
+          <div class="hide-div wx-box1" id="box1Results">
+            <h2><span id="city-1-name">City</span></h2>
+            <img id="city-1-wx-icon" src='#' alt="condition icon">
+            <h3>Temperature:&nbsp;</h3>
+            <p><span id="city-1-temp">0</span>&#176;F</p><br>
+            <h3>Humidity:&nbsp;</h3>
+            <p><span id="city-1-humidity">0</span>%</p><br>
+          </div>
+          <br>
+          <div class="hide-div overall-1" id="overall-1">
+            <h2>Overall City Score</h2>
+            <h1 id="city-1-teleport-overall">0</h1>
+          </div>
+        </div>
+
+        <!-- THE SCORES CONTAINER -->
+        <div class="column is-12-mobile is-8 score-container hide-div">
+          <div id="container"></div>
+        </div>
+
+        <div class="column is-6-mobile is-2 side-box-2">
+          <div class="hide-div wx-box2" id="box2Results">
+            <h2><span id="city-2-name">City</span></h2>
+            <img id="city-2-wx-icon" src='#' alt="condition icon">
+            <h3>Temperature:&nbsp;</h3>
+            <p><span id="city-2-temp">0</span>&#176;F</p><br>
+            <h3>Humidity:&nbsp;</h3>
+            <p><span id="city-2-humidity">0</span>%</p><br>
+          </div>
+          <br>
+          <div class="hide-div overall-2" id="overall-2">
+            <h2>Overall City Score</h2>
+            <h1 id="city-2-teleport-overall">0</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer">
+      Copyright ©2019 <br>
+      Powered By: <br>
+      City Data: Teleport API -- Weather Data: OpenWeather API
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+    integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+  <script src="assets/js/teleport-autocomplete.js"></script>
+  <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
